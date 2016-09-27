@@ -49,13 +49,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DataBaseContext.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="Goods.cs" />
+    <Compile Include="GoodsImg.cs" />
+    <Compile Include="GoodsType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserActivity.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UserLoginRecord.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YiYuan\YiYuan.csproj">
+      <Project>{9526aa71-7bdb-423f-9ac2-d48a50414b90}</Project>
+      <Name>YiYuan</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

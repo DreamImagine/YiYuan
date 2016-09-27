@@ -1,0 +1,544 @@
+﻿/*@font-face {
+    font-family: iconfont;
+    src: url(//pimg1.126.net/yyg/.remote/duobao/src/desktop/ui/paging/theme/font/iconfont.f0f0b7d8ac.eot);
+    src: url(//pimg1.126.net/yyg/.remote/duobao/src/desktop/ui/paging/theme/font/iconfont.f0f0b7d8ac.eot?#iefix) format('embedded-opentype'),url(//pimg1.126.net/yyg/.remote/duobao/src/desktop/ui/paging/theme/font/iconfont.71d2cc5738.woff) format('woff'),url(//pimg1.126.net/yyg/.remote/duobao/src/desktop/ui/paging/theme/font/iconfont.ba29307979.ttf) format('truetype'),url(//pimg1.126.net/yyg/.remote/duobao/src/desktop/ui/paging/theme/font/iconfont.e63ae415c7.svg#uxiconfont) format('svg');
+}*/
+
+.iconfont {
+    font-family: iconfont!important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ui-paging {
+    position: relative;
+}
+
+    .ui-paging .paging-tip {
+        display: none;
+        padding: 180px 0;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+        .ui-paging .paging-tip .u-loading-small {
+            display: inline-block;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+    .ui-paging.paging-mask {
+        position: relative;
+    }
+
+        .ui-paging.paging-mask .paging-tip {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 50%;
+            width: 100%;
+            padding: 0;
+            z-index: 101;
+        }
+
+        .ui-paging.paging-mask .paging-mask-bg {
+            display: block;
+        }
+
+        .ui-paging.paging-mask .loading-bar {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            width: 224px;
+            margin-left: -112px;
+            height: 64px;
+            line-height: 64px;
+            color: #FFF;
+            *background: silver;
+        }
+
+            .ui-paging.paging-mask .loading-bar .bg {
+                *display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: silver;
+                opacity: .8;
+                filter: alpha(opacity=80);
+                -webkit-box-shadow: 0 0 5px silver;
+                box-shadow: 0 0 5px silver;
+            }
+
+    .ui-paging .paging-mask-bg {
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background: #FFF;
+        opacity: .3;
+        filter: alpha(opacity=3);
+    }
+
+.paging-bar {
+    display: none;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    .paging-bar a, .paging-bar span {
+        display: inline-block;
+        min-width: 18px;
+        height: 37px;
+        line-height: 37px;
+        color: #999;
+        background: #FFF;
+        text-align: center;
+        padding: 0 10px;
+        _padding: 0 17px;
+        margin: 0 0 0 5px;
+        border: 1px solid #e5e5e5;
+        font-size: 14px;
+        outline: 0;
+        -webkit-transition: background .3s,color .3s;
+        transition: background .3s,color .3s;
+        text-decoration: none;
+    }
+
+        .paging-bar a:hover {
+            color: #f02541;
+            border-color: #f02541;
+        }
+
+    .paging-bar .total-count {
+        display: inline-block;
+        line-height: 40px;
+        padding: 0 12px;
+        font-size: 14px;
+        color: #9a9a9a;
+    }
+
+    .paging-bar .first, .paging-bar .last, .paging-bar .next, .paging-bar .prev {
+        min-width: 28px;
+        color: #9a9a9a;
+        background: #FFF;
+    }
+
+        .paging-bar .first:hover, .paging-bar .last:hover, .paging-bar .next:hover, .paging-bar .prev:hover {
+            background: #fff;
+            color: #f02541;
+            text-decoration: none;
+        }
+
+    .paging-bar .current {
+        border-color: #d91d37;
+        background: #d91d37;
+        color: #fff;
+        cursor: default;
+    }
+
+        .paging-bar .current:hover {
+            background: #f02541;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .paging-bar .current.first, .paging-bar .current.first:hover, .paging-bar .current.last, .paging-bar .current.last:hover, .paging-bar .current.next, .paging-bar .current.next:hover, .paging-bar .current.prev, .paging-bar .current.prev:hover {
+            border-color: #f2f2f2;
+            background: #f2f2f2;
+            color: #999;
+            text-decoration: none;
+        }
+
+.paging-bar-default .iconfont {
+    display: inline-block;
+    font-size: 11px;
+}
+
+.g-wrap .m-product-detail .img a, .img-block {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+    .g-wrap .m-product-detail .icon img, .g-wrap .m-product-detail .img a img, .img-block img {
+        width: 100%;
+        display: inline-block;
+    }
+
+.paging-bar {
+    display: block;
+    padding: 10px 0 40px 0;
+}
+
+body .g-wrap .pay-info {
+    margin: 0 auto 40px auto;
+}
+
+.g-wrap {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    font-family: "Microsoft YaHei",arial,simsun,SimHei;
+}
+
+    .g-wrap .g-list {
+        display: block;
+        zoom: 1;
+    }
+
+        .g-wrap .g-list:after {
+            content: " ";
+            display: block;
+            font-size: 0;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+    .g-wrap .crumbNav {
+        height: 56px;
+        line-height: 56px;
+        font-size: 16px;
+        padding-left: 12px;
+        color: #d91d37;
+    }
+
+        .g-wrap .crumbNav a {
+            color: #666;
+        }
+
+            .g-wrap .crumbNav a:hover {
+                color: #f02541;
+            }
+
+        .g-wrap .crumbNav i {
+            font-family: simsun;
+            color: #666;
+        }
+
+    .g-wrap .product-con {
+        float: left;
+        border: 1px solid #e5e5e5;
+        width: 292px;
+        height: 478px;
+        margin: 0 8px 10px 0;
+    }
+
+        .g-wrap .product-con.end {
+            margin-right: 0;
+        }
+
+    .g-wrap .m-product-detail {
+        position: relative;
+        z-index: 10;
+        line-height: 1;
+        padding-top: 20px;
+        overflow: hidden;
+    }
+
+        .g-wrap .m-product-detail .icon {
+            display: inline-block;
+            position: absolute;
+            z-index: 20;
+            top: 10px;
+            left: 10px;
+            width: 46px;
+            height: 46px;
+            overflow: hidden;
+        }
+
+        .g-wrap .m-product-detail .img {
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+        }
+
+            .g-wrap .m-product-detail .img a {
+                position: relative;
+                z-index: 10;
+            }
+
+            .g-wrap .m-product-detail .img .bg-placeholder {
+                display: none;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+
+        .g-wrap .m-product-detail .content .title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: keep-all;
+            word-wrap: normal;
+            padding-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .g-wrap .m-product-detail .content .progress .joinTimes, .g-wrap .m-product-detail .content .progress .remainTimes, .g-wrap .m-product-detail .content .progress .totalTimes {
+            font-size: 12px;
+            line-height: 1;
+            padding-bottom: 20px;
+            color: #999;
+        }
+
+        .g-wrap .m-product-detail .content .progress .progress-bar {
+            margin-bottom: 5px;
+            position: relative;
+            width: 100%;
+            height: 8px;
+            z-index: 10;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            font-size: 0;
+            line-height: 0;
+            background: #e04512;
+            background: -webkit-gradient(linear,left top,right top,from(#fcc150),to(#e04512));
+            background: -webkit-linear-gradient(left,#fcc150,#e04512);
+            background: linear-gradient(to right,#fcc150,#e04512);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcc150', endColorstr='#e04512', GradientType='1');
+        }
+
+            .g-wrap .m-product-detail .content .progress .progress-bar .bg {
+                display: block;
+                width: 101%;
+                height: 8px;
+                position: absolute;
+                z-index: 11;
+                background-color: #d8d8d8;
+                right: -1px;
+                -webkit-border-radius: 0 4px 4px 0;
+                border-radius: 0 4px 4px 0;
+            }
+
+                .g-wrap .m-product-detail .content .progress .progress-bar .bg.full {
+                    -webkit-border-radius: 4px;
+                    border-radius: 4px;
+                }
+
+            .g-wrap .m-product-detail .content .progress .progress-bar .bg {
+                -webkit-border-radius: 0\9;
+                border-radius: 0\9;
+            }
+
+                .g-wrap .m-product-detail .content .progress .progress-bar .bg.full {
+                    -webkit-border-radius: 0\9;
+                    border-radius: 0\9;
+                }
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+    .g-wrap .m-product-detail .content .progress .progress-bar .bg {
+        -webkit-border-radius: 0 4px 4px 0;
+        border-radius: 0 4px 4px 0;
+    }
+
+        .g-wrap .m-product-detail .content .progress .progress-bar .bg.full {
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+        }
+}
+
+.g-wrap .m-product-detail .content .progress .joinTimes, .g-wrap .m-product-detail .content .progress .remainTimes {
+    width: 50%;
+    float: left;
+}
+
+    .g-wrap .m-product-detail .content .progress .joinTimes mark, .g-wrap .m-product-detail .content .progress .remainTimes mark {
+        display: block;
+        padding-bottom: 5px;
+        background: 0 0;
+        color: #999;
+    }
+
+.g-wrap .m-product-detail .content .progress .remainTimes {
+    text-align: right;
+    float: right;
+    margin-left: -10px;
+}
+
+.g-wrap .m-product-detail .content .btns .buy {
+    display: inline-block;
+    width: 130px;
+    height: 36px;
+    background-color: #d91d37;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+    .g-wrap .m-product-detail .content .btns .buy:hover {
+        background-color: #f02541;
+        text-decoration: none;
+        color: #fff;
+    }
+
+.g-wrap .m-product-detail .icon {
+    width: 54px;
+    height: 54px;
+}
+
+.g-wrap .m-product-detail .img {
+    width: 220px;
+    height: 204px;
+    margin: 0 auto;
+}
+
+    .g-wrap .m-product-detail .img a {
+        line-height: 204px;
+    }
+
+    .g-wrap .m-product-detail .img .bg-placeholder {
+        color: #d9d9d9;
+        background-color: #f2f2f2;
+        text-align: center;
+        width: 100%;
+        display: block;
+        height: 204px;
+        line-height: 204px;
+    }
+
+    .g-wrap .m-product-detail .img .icon-base {
+        font-size: 44px;
+    }
+
+.g-wrap .m-product-detail .content {
+    padding-top: 20px;
+}
+
+    .g-wrap .m-product-detail .content .btns {
+        text-align: center;
+        background-color: #f2f2f2;
+        border-top: 1px solid #e5e5e5;
+        height: 113px;
+    }
+
+        .g-wrap .m-product-detail .content .btns .buy {
+            width: 160px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+    .g-wrap .m-product-detail .content .title {
+        padding: 0 24px 10px 24px;
+    }
+
+    .g-wrap .m-product-detail .content .progress {
+        display: block;
+        zoom: 1;
+        margin: 0 24px;
+        height: 94px;
+    }
+
+        .g-wrap .m-product-detail .content .progress:after {
+            content: " ";
+            display: block;
+            font-size: 0;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .g-wrap .m-product-detail .content .progress .remainTimes mark {
+            color: #333;
+        }
+
+.g-wrap .m-product-detail.end {
+    border-right: 0;
+    margin-right: -5px;
+}
+
+.inumber {
+    display: block;
+    padding: 16px 0 14px 0;
+    margin: 0 auto;
+    color: #999;
+}
+
+    .inumber i {
+        display: inline-block;
+        border: 1px solid #e0e0e0;
+        width: 26px;
+        height: 26px;
+        vertical-align: middle;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .inumber input {
+        border: 1px solid #e0e0e0;
+        width: 70px;
+        height: 20px;
+        padding: 3px;
+        vertical-align: middle;
+        outline: 0;
+        text-align: center;
+        margin: 0 -1px;
+        font-size: 14px;
+    }
+
+    .inumber i {
+        font-size: 0;
+    }
+
+    .inumber i {
+        *font-size: 18px;
+    }
+
+        .inumber .disabled:active:before, .inumber i:before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            font-style: normal;
+            font-size: 16px;
+            color: #bbb;
+            font-family: "宋体";
+        }
+
+        .inumber i:active:before {
+            left: 6px;
+            top: 4px;
+        }
+
+    .inumber .add {
+        margin-right: 20px;
+    }
+
+        .inumber .add:before {
+            content: "＋";
+            color: #9e9e9e;
+        }
+
+    .inumber .reduce {
+        margin-left: 20px;
+    }
+
+        .inumber .reduce:before {
+            content: "－";
+            color: #9e9e9e;
+        }
+
+    .inumber .disabled {
+        opacity: .5;
+    }
+
+    .inumber .reduceDisStrong {
+        border-color: #000;
+    }
+
+        .inumber .reduceDisStrong:active:before {
+            left: 6px;
+            top: 4px;
+        }

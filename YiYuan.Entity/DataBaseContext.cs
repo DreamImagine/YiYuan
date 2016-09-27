@@ -9,5 +9,9 @@ namespace YiYuan.Entity
 {
     public class DataBaseContext : DbContext
     {
+        public DataBaseContext()
+            : base("YiYuanConnection")
+        {
+        }
     }
 }
