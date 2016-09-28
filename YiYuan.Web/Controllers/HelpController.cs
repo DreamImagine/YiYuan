@@ -6,13 +6,12 @@ using System.Web.Mvc;
 
 namespace YiYuan.Web.Controllers
 {
-
     /// <summary>
-    /// 十元
+    /// 帮助
     /// </summary>
-    public class TenController : Controller
+    public class HelpController : Controller
     {
-        // GET: Ten
+        // GET: Help
         public ActionResult Index()
         {
             return View();

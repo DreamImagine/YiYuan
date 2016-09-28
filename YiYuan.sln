@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiYuan", "YiYuan\YiYuan.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiYuan.Business", "YiYuan.Business\YiYuan.Business.csproj", "{0AB03F8A-B557-4988-970C-C733F3B94A63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiYuan.Admin", "YiYuan.Admin\YiYuan.Admin.csproj", "{FD9FE4FC-9C7D-4174-8AF1-DC1B1F7E3636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0AB03F8A-B557-4988-970C-C733F3B94A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AB03F8A-B557-4988-970C-C733F3B94A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AB03F8A-B557-4988-970C-C733F3B94A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD9FE4FC-9C7D-4174-8AF1-DC1B1F7E3636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9FE4FC-9C7D-4174-8AF1-DC1B1F7E3636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD9FE4FC-9C7D-4174-8AF1-DC1B1F7E3636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD9FE4FC-9C7D-4174-8AF1-DC1B1F7E3636}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

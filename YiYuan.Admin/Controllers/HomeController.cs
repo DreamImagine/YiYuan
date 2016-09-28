@@ -4,17 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace YiYuan.Web.Controllers
+namespace YiYuan.Admin.Controllers
 {
-
-    /// <summary>
-    /// 十元
-    /// </summary>
-    public class TenController : Controller
+    public class HomeController : Controller
     {
-        // GET: Ten
         public ActionResult Index()
         {
+            ViewBag.Title = "Home Page";
+
             return View();
         }
     }
