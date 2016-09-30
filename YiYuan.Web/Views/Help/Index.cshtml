@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "帮助中心";
+}
+@section styles{
+    <link href="~/Content/oneyuan_css.css" rel="stylesheet" />
+}
+@Html.Partial("_PartialHelpLeft")
+
+<article class="content">
+    <h2>了解一元购</h2>
+    <h3>什么是1元购?</h3>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">1元购是指您花费1元购买1欢乐豆，同时获赠网易彩票1朵圈子鲜花，您可凭欢乐豆使用1元购的服务。</span>
+    </div>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">每件商品全部号码分配完毕后，1元购将根据规则计算出一个号码。持有该幸运号码的用户可直接获得该商品。</span>
+    </div>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">商品由网易公司或经网易公司确认的第三方商家提供及发货。</span>
+    </div>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">&nbsp;</span>
+    </div>
+    <h3>3步操作</h3>
+    <div style="margin-left: 30px;">
+        <p class="f_center" style="margin-left: 0px;">
+            <img alt="了解一元购" src="../../image/2016032612180329ca4.png"><br>
+        </p>
+        <br>
+    </div>
+    <div>
+        <h3>1元购规则</h3>
+    </div>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">1. 选择喜欢的商品：每个商品规定了总需参与人次，1人次=1欢乐豆=1元</span>
+    </div>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">2. 支付相应金额：支付成功后，系统将随机为您分配相应数量的号码；</span>
+    </div>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">3. 获得商品：当所有号码都分配完毕后，系统将计算出1个幸运号码，持有该号码的用户，直接获得该商品。</span>
+    </div>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">&nbsp;</span>
+    </div>
+    <div>
+        <h3>幸运号码计算规则</h3>
+    </div>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">1. 商品的最后一个号码分配完毕后，将公示该分配时间点前本站全部商品的最后100个参与时间；</span>
+    </div>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">2. 将这100个时间的数值进行求和，得到数值A（每个时间按时、分、秒、毫秒的顺序组合，如20:15:25.362则为201525362）；</span>
+    </div>
+    <div style="margin-left: 30px;">
+        <span style="text-indent: 28px;">3. 数值A除以该商品总需人次得到的余数 + 原始数 10000001，得到最终幸运号码，拥有该幸运号码者，直接获得该商品。</span>
+    </div>
+</article>
+
+

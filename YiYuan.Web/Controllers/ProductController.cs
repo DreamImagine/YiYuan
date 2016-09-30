@@ -22,8 +22,9 @@ namespace YiYuan.Web.Controllers
         /// <summary>
         /// 商品详情
         /// </summary>
+        /// <param name="id">商品编号</param>
         /// <returns></returns>
-        public ActionResult Detail()
+        public ActionResult Detail(int id)
         {
             return View();
         }
@@ -32,11 +33,10 @@ namespace YiYuan.Web.Controllers
         /// 分类
         /// </summary>
         /// <returns></returns>
-        public ActionResult Sort()
+        public ActionResult Sort(int typeId = 0)
         {
             return View();
         }
-
 
 
 

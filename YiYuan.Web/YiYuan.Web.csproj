@@ -167,6 +167,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Controllers\HelpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -185,10 +186,25 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\core.css" />
     <Content Include="Content\index.css" />
+    <Content Include="Content\oneyuan_css.css" />
     <Content Include="Content\ProductList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\1468552858865_1.jpg" />
+    <Content Include="Images\1473318448850_1.jpg" />
+    <Content Include="Images\1473318562799_1.jpg" />
+    <Content Include="Images\1475056348425_1.jpg" />
+    <Content Include="Images\1475057018078_1.jpg" />
+    <Content Include="Images\1475163692795_1.jpg" />
+    <Content Include="Images\37318713a12c78d6.png" />
+    <Content Include="Images\62d3bedb41d12fff.png" />
+    <Content Include="Images\7053be037f2313d6.png" />
+    <Content Include="Images\bottom-logo.87035c10fc.png" />
+    <Content Include="Images\d2493d50aa7b2c0f.png" />
+    <Content Include="Images\header01.fd9cd4db4c.png" />
+    <Content Include="Images\placeholder.7dfa552446.png" />
+    <Content Include="Images\qrcode.0993ecf79f.png" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -237,12 +253,22 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Ten\Index.cshtml" />
+    <Content Include="Views\Help\Index.cshtml" />
+    <Content Include="Views\Help\Protocol.cshtml" />
+    <Content Include="Views\Help\_PartialHelpLeft.cshtml" />
+    <Content Include="Views\Help\Distribution.cshtml" />
+    <Content Include="Views\Help\Question.cshtml" />
+    <Content Include="Views\Help\Equity.cshtml" />
+    <Content Include="Views\Help\Guarantee.cshtml" />
+    <Content Include="Views\Help\Pay.cshtml" />
+    <Content Include="Views\Help\DistributionCost.cshtml" />
+    <Content Include="Views\Help\Signin.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\App\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Help\" />
-    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
