@@ -16,5 +16,9 @@ namespace YiYuan.Entity
 
 
         public IDbSet<UserInfo> UserInfo { get; set; }
+
+        public IDbSet<AdminInfo> AdminInfo { get; set; }
+
+        public IDbSet<AdminRule> AdminRule { get; set; }
     }
 }

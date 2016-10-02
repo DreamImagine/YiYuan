@@ -42,7 +42,6 @@ namespace YiYuan.Admin.Controllers
             Response.Cookies["adminId"].Value = result.Id;
             Response.Cookies["adminId"].Expires = DateTime.Now.AddDays(1);
 
-
             return View();
         }
 
