@@ -10,7 +10,7 @@ namespace YiYuan.Admin.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "后台首页";
 
             return View();
         }
