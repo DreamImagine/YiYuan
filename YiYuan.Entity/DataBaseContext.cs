@@ -13,5 +13,8 @@ namespace YiYuan.Entity
             : base("YiYuanConnection")
         {
         }
+
+
+        public IDbSet<UserInfo> UserInfo { get; set; }
     }
 }

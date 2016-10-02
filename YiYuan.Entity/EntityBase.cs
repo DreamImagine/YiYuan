@@ -10,6 +10,12 @@ namespace YiYuan.Entity
     /// <typeparam name="T">主键类型</typeparam>
     public class EntityBase<T>
     {
+
+        public EntityBase()
+        {
+            CreateTime = DateTime.Now;
+        }
+
         /// <summary>
         /// 主键
         /// </summary>

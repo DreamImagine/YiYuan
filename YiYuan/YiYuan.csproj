@@ -43,6 +43,7 @@
     <Compile Include="BusinessResponse.cs" />
     <Compile Include="CodeOrderType.cs" />
     <Compile Include="DataState.cs" />
+    <Compile Include="ExtendHelper.cs" />
     <Compile Include="IBusinessResponse.cs" />
     <Compile Include="IPagingBusinessResponse.cs" />
     <Compile Include="Paging.cs" />

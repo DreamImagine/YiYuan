@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace YiYuan.Entity
 {
@@ -37,6 +38,7 @@ namespace YiYuan.Entity
         /// <summary>
         /// 商品编号
         /// </summary>
+        [ForeignKey("Goods")]
         public int GoodsId { get; set; }
 
         /// <summary>
@@ -54,5 +56,10 @@ namespace YiYuan.Entity
         /// <para>中奖者</para>
         /// </summary>
         public int LuckyUserId { get; set; }
+
+        /// <summary>
+        /// 商品信息
+        /// </summary>
+        public Goods Goods { get; set; }
     }
 }

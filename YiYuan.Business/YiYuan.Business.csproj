@@ -53,15 +53,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityBusiness.cs" />
+    <Compile Include="AdminInfoBusiness.cs" />
     <Compile Include="EFConfigure.cs" />
     <Compile Include="EFContextFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseBusiness.cs" />
+    <Compile Include="UserInfoBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YiYuan.Entity\YiYuan.Entity.csproj">
       <Project>{1ddc7188-5dd4-40b3-a934-01e40f8afeb9}</Project>
       <Name>YiYuan.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YiYuan.ViewModel\YiYuan.ViewModel.csproj">
+      <Project>{01efc59e-fb12-4004-b688-f3915e1747cb}</Project>
+      <Name>YiYuan.ViewModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\YiYuan\YiYuan.csproj">
       <Project>{9526aa71-7bdb-423f-9ac2-d48a50414b90}</Project>

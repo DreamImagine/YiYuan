@@ -9,7 +9,7 @@ namespace YiYuan.Entity
     /// 用户信息
     /// </summary>
     [Table("UserInfo")]
-    public class UserInfo : EntityBase<Int32>
+    public class UserInfo : EntityBase<int>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserInfo"/> class.

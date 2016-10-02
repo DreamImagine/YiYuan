@@ -24,20 +24,20 @@
                 <ul id="topNavRight">
                     <li class="mcDropMenuBox">
                         <span class="vertical-split-line">|</span>
-                        <a data-user="y" class="topNavHolder nav-link" href="http://888.163.com/user/.html">我的1元购<i class="icon-base">&#xe60b;</i></a>
+                        <a data-user="y" class="topNavHolder nav-link" href="/user">我的1元购<i class="icon-base">&#xe60b;</i></a>
                         <div class="mcDropMenu">
-                            <a data-user="y" href="http://888.163.com/user/join/.html?isSelf=1">参与记录</a>
-                            <a data-user="y" href="http://888.163.com/user/win/.html?isSelf=1">中奖记录</a>
-                            <a data-user="y" href="http://888.163.com/user/profile.html">个人信息</a>
+                            <a data-user="y" href="/user/join">参与记录</a>
+                            <a data-user="y" href="/user/win">中奖记录</a>
+                            <a data-user="y" href="/user/Info">个人信息</a>
                         </div>
                         <span class="vertical-split-line">|</span>
                     </li>
                     <li>
-                        <a data-user="y" href="http://888.163.com/user/.html" class="nav-link my-balance">余额</a>
+                        <a data-user="y" href="/user" class="nav-link my-balance">余额</a>
                         <span class="vertical-split-line">|</span>
                     </li>
                     <li>
-                        <a data-user="y" href="http://888.163.com/coupon/goToBonus.html" class="nav-link my-coupon">我的红包</a>
+                        <a data-user="y" href="/user/redpackets" class="nav-link my-coupon">我的红包</a>
                         <span class="vertical-split-line">|</span>
                     </li>
                     <li>
@@ -45,11 +45,8 @@
                         <span class="vertical-split-line">|</span>
                     </li>
                     <li>
-                        <a href="http://888.163.com/help" target="_blank" class="nav-link">帮助</a>
-                        <span class="vertical-split-line">|</span>
-                    </li>
-                    <li>
-                        <a href="http://chat.zxkf.163.com/yiyuangou/webchatPage/index.html" target="_blank" class="nav-link">客户服务</a>
+                        <a href="/help" target="_blank" class="nav-link">帮助</a>
+                        @*    <span class="vertical-split-line">|</span>*@
                     </li>
                 </ul>
                 <div id="topNavLeft"></div>
@@ -103,19 +100,19 @@
                     </ul>
                 </li>
                 <li pid="home" class="tab-item">
-                    <a href="http://888.163.com/">首页</a>
+                    <a href="/">首页</a>
                 </li>
                 <li pid="area-ten" class="tab-item">
-                    <a href="http://888.163.com/ten/">十元专区</a>
+                    <a href="/ten/">十元专区</a>
                 </li>
                 <li pid="anc-latest" class="tab-item">
-                    <a href="http://888.163.com/results/" target="_blank">最新揭晓</a>
+                    <a href="/results/" target="_blank">最新揭晓</a>
                 </li>
                 <li pid="show-award" class="tab-item">
-                    <a href="http://888.163.com/share/" target="_blank">晒单分享</a>
+                    <a href="/share/" target="_blank">晒单分享</a>
                 </li>
                 <li pid="download" class="tab-item">
-                    <a href="http://888.163.com/app/" target="_blank">手机客户端</a>
+                    <a href="/app/" target="_blank">手机客户端</a>
                 </li>
             </ul>
         </nav>
@@ -211,7 +208,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-   @* <script src="~/Scripts/core.js"></script>*@
+    @* <script src="~/Scripts/core.js"></script>*@
     @RenderSection("scripts", required: false)
 </body>
 </html>
