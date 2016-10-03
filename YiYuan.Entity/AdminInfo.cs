@@ -7,9 +7,10 @@ namespace YiYuan.Entity
     /// 管理员信息
     /// </summary>
     public class AdminInfo : EntityBase<int>
-    {        /// <summary>
-             /// 用户名称
-             /// </summary>
+    {
+        /// <summary>
+        /// 用户名称
+        /// </summary>
         [Column(TypeName = "VARCHAR")]
         [Display(Name = "用户名称")]
         [StringLength(100)]

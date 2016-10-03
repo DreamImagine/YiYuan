@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity.cs" />
+    <Compile Include="Issue.cs" />
     <Compile Include="Addres.cs" />
     <Compile Include="AdminInfo.cs" />
     <Compile Include="AdminRule.cs" />
@@ -60,7 +60,8 @@
     <Compile Include="GoodsImg.cs" />
     <Compile Include="GoodsType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserActivity.cs" />
+    <Compile Include="UserIntegralCurrency.cs" />
+    <Compile Include="UserIssue.cs" />
     <Compile Include="UserAddress.cs" />
     <Compile Include="UserInfo.cs" />
     <Compile Include="UserLoginRecord.cs" />

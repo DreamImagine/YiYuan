@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace YiYuan.Entity
+﻿namespace YiYuan.Entity
 {
     /// <summary>
     /// 地址
@@ -12,7 +6,7 @@ namespace YiYuan.Entity
     public class Addres : EntityBase<int>
     {
         /// <summary>
-        /// 
+        /// 地址名称
         /// </summary>
         public string Name { get; set; }
 

@@ -4,21 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
+using YiYuan.Enums;
 
 namespace YiYuan.Entity
 {
     /// <summary>
-    /// 活动（期）
+    /// 商品期号
     /// </summary>
-    public class Activity : EntityBase<int>
+    public class Issue : EntityBase<int>
     {
-
         /// <summary>
         /// 期号
         /// <para>针对每个商品进行累加</para>
         /// </summary>
         public int No { get; set; }
-
 
         /// <summary>
         /// 结束次数
@@ -42,9 +41,11 @@ namespace YiYuan.Entity
         public int GoodsId { get; set; }
 
         /// <summary>
-        /// 是否开奖
+        /// 期号状态
         /// </summary>
-        public bool IsEnd { get; set; }
+        public IssueStatus IssueStatus { get; set; }
+
+     
 
         /// <summary>
         /// 开奖时间

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace YiYuan.Entity
 {
@@ -13,7 +9,6 @@ namespace YiYuan.Entity
     /// </summary>
     public class Goods : EntityBase<int>
     {
-
         /// <summary>
         /// 商量类型
         /// <para>GoodsType 外键</para>

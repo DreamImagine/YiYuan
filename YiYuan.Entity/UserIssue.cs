@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace YiYuan.Entity
 {
     /// <summary>
-    /// 用户购买活动
+    /// 用户购买期号
     /// </summary>
-    public class UserActivity : EntityBase<int>
+    public class UserIssue : EntityBase<int>
     {
         /// <summary>
         /// 活动编号
         /// </summary>
-        public int ActivityId { get; }
+        public int IssueId { get; }
 
         /// <summary>
         /// 用户编号

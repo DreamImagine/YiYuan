@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace YiYuan.Entity
 {
-    public class AdminRule:EntityBase<int>
+    /// <summary>
+    /// 
+    /// </summary>
+    public class AdminRule : EntityBase<int>
     {
     }
 }
