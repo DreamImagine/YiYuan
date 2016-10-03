@@ -39,7 +39,6 @@ namespace YiYuan.Entity
         /// </summary>
         public int Number { get; set; }
 
-
         /// <summary>
         /// 密码(MD5)
         /// </summary>
@@ -74,14 +73,6 @@ namespace YiYuan.Entity
         public string Mobile { get; set; }
 
         /// <summary>
-        /// 用户生日
-        /// </summary>
-        [Column(TypeName = "CHAR")]
-        [Display(Name = "用户生日")]
-        [StringLength(8)]
-        public string Birthday { get; set; }
-
-        /// <summary>
         /// 用户头像
         /// </summary>
         [Column(TypeName = "VARCHAR")]
@@ -97,11 +88,10 @@ namespace YiYuan.Entity
         public string Token { get; set; }
 
         /// <summary>
-        /// 用户个性签名
+        /// 已充值金额
         /// </summary>
-        [MaxLength(200)]
-        [Required]
-        public string Signature { get; set; }
+        public decimal RechargePrice { get; set; }
+
 
         /// <summary>
         /// 城市编码

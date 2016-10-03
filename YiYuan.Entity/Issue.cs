@@ -26,20 +26,14 @@ namespace YiYuan.Entity
         public decimal TotalPrice { get; set; }
 
         /// <summary>
-        /// 每注价格
-        /// </summary>
-        public decimal Price { get; set; }
-
-        /// <summary>
         /// 商品编号
         /// </summary>
-        [ForeignKey("Goods")]
-        public int GoodsId { get; set; }
+        public int ActivityGoodsId { get; set; }
 
         /// <summary>
         /// 期号状态
         /// </summary>
-        public IssueStatus IssueStatus { get; set; }     
+        public IssueStatus IssueStatus { get; set; }
 
         /// <summary>
         /// 开奖时间
@@ -51,10 +45,5 @@ namespace YiYuan.Entity
         /// <para>中奖者</para>
         /// </summary>
         public int LuckyUserId { get; set; }
-
-        /// <summary>
-        /// 商品信息
-        /// </summary>
-        public Goods Goods { get; set; }
     }
 }

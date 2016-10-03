@@ -43,7 +43,11 @@
     <Compile Include="BusinessResponse.cs" />
     <Compile Include="CodeOrderType.cs" />
     <Compile Include="DataState.cs" />
+    <Compile Include="Enums\ActivityStatus.cs" />
     <Compile Include="Enums\IssueStatus.cs" />
+    <Compile Include="Enums\OrderStatus.cs" />
+    <Compile Include="Enums\RechargeStatus.cs" />
+    <Compile Include="Enums\RechargeType.cs" />
     <Compile Include="ExtendHelper.cs" />
     <Compile Include="IBusinessResponse.cs" />
     <Compile Include="IPagingBusinessResponse.cs" />
