@@ -2,7 +2,7 @@
 
 namespace YiYuan.Business
 {
-    public class ActivityBusiness:BaseBusiness<Issue>
+    public class IssueBusiness : BaseBusiness<Issue>
     {
     }
 }

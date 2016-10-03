@@ -39,9 +39,7 @@ namespace YiYuan.Entity
         /// <summary>
         /// 期号状态
         /// </summary>
-        public IssueStatus IssueStatus { get; set; }
-
-     
+        public IssueStatus IssueStatus { get; set; }     
 
         /// <summary>
         /// 开奖时间
