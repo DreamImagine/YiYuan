@@ -26,7 +26,7 @@ namespace YiYuan.Web.Controllers
         {
             var activityBusiness = new ActivityBusiness();
 
-            ViewBag.Data=activityBusiness.GetFirstByWhere(t=>t.GoodsId==id && t.IsEnd==false,t=>new {
+            ViewBag.Data=activityBusiness.GetFirstByWhere(t=>t.GoodsId==id,t=>new {
                t.Goods.Name,
                t.Goods.Title,
                t.No,
