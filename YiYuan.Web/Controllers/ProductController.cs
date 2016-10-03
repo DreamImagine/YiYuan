@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using YiYuan.Business;
+using YiYuan.Enums;
 
 namespace YiYuan.Web.Controllers
 {
@@ -24,9 +25,9 @@ namespace YiYuan.Web.Controllers
         /// <returns></returns>
         public ActionResult Detail(int id = 0)
         {
-            var activityBusiness = new ActivityBusiness();
+            var activityBusiness = new IssueBusiness();       
 
-            ViewBag.Data=activityBusiness.GetFirstByWhere(t=>t.GoodsId==id && t.IsEnd==false,t=>new {
+            ViewBag.Data=activityBusiness.GetFirstByWhere(t=>t.GoodsId==id, t=>new {
                t.Goods.Name,
                t.Goods.Title,
                t.No,

@@ -15,8 +15,8 @@ namespace YiYuan.Entity
         /// <summary>
         /// 商品编号
         /// </summary>
+        
         public int GoodsId { get; set; }
-
 
         /// <summary>
         /// 图片路径
@@ -27,6 +27,11 @@ namespace YiYuan.Entity
         /// 排序
         /// </summary>
         public int Sort { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Goods Goods { get; set; }
 
     }
 }

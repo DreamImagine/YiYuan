@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 namespace YiYuan.Entity
 {
     /// <summary>
-    /// 管理角色表
+    /// 用户积分使用
     /// </summary>
-    public class AdminRule : EntityBase<int>
+    public class UserIntegralCurrencyUse
     {
-        /// <summary>
-        /// 角色
-        /// </summary>
-        public string Name { get; set; }
     }
 }
