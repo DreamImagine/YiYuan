@@ -5,7 +5,7 @@ using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.Entity.Infrastructure;
 using YiYuan.Entity;
 
-namespace YiYuan.Core
+namespace YiYuan.Business
 {
     /// <summary>
     /// ef 自定义配置类

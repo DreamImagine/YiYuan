@@ -7,8 +7,8 @@
     <ProjectGuid>{0AB03F8A-B557-4988-970C-C733F3B94A63}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YiYuan.Core</RootNamespace>
-    <AssemblyName>YiYuan.Core</AssemblyName>
+    <RootNamespace>YiYuan.Business</RootNamespace>
+    <AssemblyName>YiYuan.Business</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityBusiness.cs" />
     <Compile Include="IssueBusiness.cs" />
     <Compile Include="AdminInfoBusiness.cs" />
     <Compile Include="EFConfigure.cs" />

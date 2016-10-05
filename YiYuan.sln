@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiYuan.Web", "YiYuan.Web\YiYuan.Web.csproj", "{F2AC5B3B-0043-4345-9A76-4A4889C20948}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiYuan", "YiYuan\YiYuan.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiYuan.Business", "YiYuan.Business\YiYuan.Business.csproj", "{0AB03F8A-B557-4988-970C-C733F3B94A63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiYuan.Admin", "YiYuan.Admin\YiYuan.Admin.csproj", "{FD9FE4FC-9C7D-4174-8AF1-DC1B1F7E3636}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiYuan.Web.Admin", "YiYuan.Admin\YiYuan.Web.Admin.csproj", "{FD9FE4FC-9C7D-4174-8AF1-DC1B1F7E3636}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiYuan.ViewModel", "YiYuan.ViewModel\YiYuan.ViewModel.csproj", "{01EFC59E-FB12-4004-B688-F3915E1747CB}"
 EndProject
