@@ -1,7 +1,9 @@
-﻿
-@{
-    var data=ViewBag.Data;
+﻿@{
+    var data = ViewBag.Data;
     ViewBag.Title = data.Name;
+}
+@section styles{
+    <link href="~/Content/index.css" rel="stylesheet" />
 }
 <div class="m-product-nav">
     <a href="../navigationbar/home.html">首页</a>

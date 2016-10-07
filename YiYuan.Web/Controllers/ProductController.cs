@@ -1,6 +1,8 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
 using YiYuan.Business;
 using YiYuan.Enums;
+using YiYuan.ViewModel;
 
 namespace YiYuan.Web.Controllers
 {
@@ -12,9 +14,26 @@ namespace YiYuan.Web.Controllers
     {
         // GET: Product
         [Route("product/{id}")]
-        public ActionResult Index(int id=0)
+        public ActionResult Index(int id = 0)
         {
-            return View();
+
+            var list = new List<ProductListViewModel>();
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+
+            return View(list);
         }
 
 
@@ -36,6 +55,8 @@ namespace YiYuan.Web.Controllers
             //   t.Goods.Description
             //});
 
+            ViewBag.Data = new ProductViewModel();
+
             return View();
         }
 
@@ -45,7 +66,24 @@ namespace YiYuan.Web.Controllers
         /// <returns></returns>
         public ActionResult Sort(int typeId = 0)
         {
-            return View();
+            var list = new List<ProductListViewModel>();
+
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+            list.Add(new ProductListViewModel());
+
+            return View(list);
         }
 
 

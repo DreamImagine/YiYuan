@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminInfoLoginViewModel.cs" />
+    <Compile Include="ProductListViewModel.cs" />
+    <Compile Include="ProductViewModel.cs" />
     <Compile Include="UserLoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

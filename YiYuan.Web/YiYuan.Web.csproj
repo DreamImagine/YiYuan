@@ -167,6 +167,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Controllers\HelpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -187,6 +188,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\core.css" />
     <Content Include="Content\index.css" />
+    <Content Include="Content\Login.css" />
     <Content Include="Content\oneyuan_css.css" />
     <Content Include="Content\ProductList.css" />
     <Content Include="favicon.ico" />
@@ -265,6 +267,10 @@
     <Content Include="Views\Help\Signin.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\App\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Product\Sort.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
