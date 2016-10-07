@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace YiYuan.Admin.Controllers
+namespace YiYuan.Web.Admin.Controllers
 {
     public class UserInfoController : Controller
     {

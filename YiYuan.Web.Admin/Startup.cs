@@ -1,9 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(YiYuan.Admin.Startup))]
-
-namespace YiYuan.Admin
+[assembly: OwinStartupAttribute(typeof(YiYuan.Web.Admin.Startup))]
+namespace YiYuan.Web.Admin
 {
     public partial class Startup
     {

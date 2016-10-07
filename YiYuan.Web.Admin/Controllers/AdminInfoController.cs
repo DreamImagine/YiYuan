@@ -2,7 +2,7 @@
 using YiYuan.Business;
 using YiYuan.Entity;
 
-namespace YiYuan.Admin.Controllers
+namespace YiYuan.Web.Admin.Controllers
 {
     public class AdminInfoController : Controller
     {

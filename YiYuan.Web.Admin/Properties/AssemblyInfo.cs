@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // 有关程序集的常规信息是通过以下项进行控制的
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("YiYuan.Admin")]
+[assembly: AssemblyTitle("YiYuan.Web.Admin")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("YiYuan.Admin")]
+[assembly: AssemblyProduct("YiYuan.Web.Admin")]
 [assembly: AssemblyCopyright("版权所有(C)  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于 typelib 的 ID
-[assembly: Guid("517fa438-a0f6-4d17-bdc5-084a5be89099")]
+[assembly: Guid("10e5bfe1-9e18-451d-8acd-e44708022d70")]
 
 // 程序集的版本信息由下列四个值组成:
 //

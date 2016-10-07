@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace YiYuan.Admin
+namespace YiYuan.Web.Admin
 {
     public class RouteConfig
     {
