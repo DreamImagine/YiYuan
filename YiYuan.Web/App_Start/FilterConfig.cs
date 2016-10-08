@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using YiYuan.Web.Filter;
 
 namespace YiYuan.Web
 {
@@ -7,6 +8,7 @@ namespace YiYuan.Web
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            //filters.Add(new WebOperationAttribute(), 2);
         }
     }
 }

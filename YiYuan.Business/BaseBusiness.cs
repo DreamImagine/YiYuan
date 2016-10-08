@@ -644,6 +644,16 @@ namespace YiYuan.Business
         }
 
         /// <summary>
+        /// 异步添加
+        /// </summary>
+        /// <param name="t"></param>
+        public void AddAsync(T t)
+        {
+            context.Set<T>().Add(t);
+            context.SaveChangesAsync();
+        }
+
+        /// <summary>
         /// 批量新增
         /// </summary>
         /// <param name="list"></param>

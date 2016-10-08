@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Activity.cs" />
     <Compile Include="ActivityGoods.cs" />
+    <Compile Include="CityInfo.cs" />
     <Compile Include="Issue.cs" />
     <Compile Include="Addres.cs" />
     <Compile Include="AdminInfo.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="UserIntegralCurrency.cs" />
     <Compile Include="UserIntegralCurrencyUse.cs" />
     <Compile Include="UserMessage.cs" />
+    <Compile Include="UserOperateWebRecord.cs" />
     <Compile Include="UserOrder.cs" />
     <Compile Include="UserAddress.cs" />
     <Compile Include="UserInfo.cs" />

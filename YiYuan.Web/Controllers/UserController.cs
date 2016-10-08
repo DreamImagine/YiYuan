@@ -52,11 +52,5 @@ namespace YiYuan.Web.Controllers
         {
             return View();
         }
-
-
-
-
-
-
     }
 }

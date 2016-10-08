@@ -47,7 +47,7 @@ namespace YiYuan.Business
                 Mobile = register.Username
             };
 
-            userInfo.Salt = ExtendHelper.MD5(Guid.NewGuid().ToString().Substring(1, 5));
+            userInfo.Salt = ExtendHelper.MD5(Guid.NewGuid().ToString("N").Substring(1, 5));
             userInfo.Password = ExtendHelper.MD5(register.Password + userInfo.Salt);
 
             context.UserInfo.Add(userInfo);
