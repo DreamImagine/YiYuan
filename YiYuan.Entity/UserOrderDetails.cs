@@ -6,7 +6,7 @@
     public class UserOrderDetails : EntityBase<int>
     {
         /// <summary>
-        /// 订单
+        /// 订单编号
         /// </summary>
         public int OrderId { get; set; }
 

@@ -1,5 +1,6 @@
-﻿@{
-    var data = ViewBag.Data;
+﻿@using YiYuan.ViewModel
+@{
+    var data = ViewBag.Data as ProductViewModel;
     ViewBag.Title = data.Name;
 }
 @section styles{

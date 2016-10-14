@@ -10,19 +10,22 @@ namespace YiYuan.Entity
     public class Goods : EntityBase<int>
     {
         /// <summary>
-        /// 商量类型
+        /// 商品类型
         /// <para>GoodsType 外键</para>
         /// </summary>
+        [Display(Name = "商品类型")]
         public int GoodsTypeId { get; set; }
 
         /// <summary>
-        /// 名称
+        /// 
         /// </summary>
+        [Display(Name = "名称")]
         public string Name { get; set; }
 
         /// <summary>
         /// 简单标题
         /// </summary>
+        [Display(Name = "简单标题")]
         public string Title { get; set; }
 
         /// <summary>
@@ -34,6 +37,7 @@ namespace YiYuan.Entity
         /// <summary>
         /// 结束次数
         /// </summary>
+        [Display(Name = "结束次数")]
         public int EndNumber { get; set; }
 
         /// <summary>
@@ -46,6 +50,7 @@ namespace YiYuan.Entity
         /// <summary>
         /// 是否发布
         /// </summary>
+        [Display(Name = "是否发布")]
         public bool IsPublish { get; set; }
 
         /// <summary>

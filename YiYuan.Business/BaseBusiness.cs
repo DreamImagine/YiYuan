@@ -32,7 +32,6 @@ namespace YiYuan.Business
         {
             context = EFContextFactory.GetCurrentDbContext();
         }
-
         /// <summary>
         /// 设置query 查询对象
         /// </summary>
@@ -64,6 +63,18 @@ namespace YiYuan.Business
         }
 
         /// <summary>
+        /// 返回总个数.
+        /// </summary>
+        /// <returns></returns>
+        public IBusinessResponse<Int32> GetCount()
+        {
+
+            var count = this.GetQueryable().Count();
+
+            return new BusinessResponse<Int32>(count);
+        }
+
+        /// <summary>
         /// 根据表达式查询返回总个数.
         /// </summary>
         /// <param name="where">The where.</param>
@@ -74,6 +85,7 @@ namespace YiYuan.Business
 
             return new BusinessResponse<Int32>(count);
         }
+
 
         /// <summary>
         /// 根据表达式查询返回总个数
@@ -133,7 +145,7 @@ namespace YiYuan.Business
         }
 
         /// <summary>
-        /// 根据表达式返回单个元素
+        /// 根据表达式返回第一个元素
         /// </summary>
         /// <param name="where"></param>
         /// <returns></returns>
@@ -150,7 +162,7 @@ namespace YiYuan.Business
         }
 
         /// <summary>
-        /// 根据表达式返回单个元素
+        /// 根据表达式返回第一个自定义元素
         /// <para>带有Select</para>
         /// </summary>
         /// <param name="where"></param>
@@ -230,7 +242,7 @@ namespace YiYuan.Business
         }
 
         /// <summary>
-        /// 
+        /// 数据是否存在
         /// </summary>
         /// <param name="where"></param>
         /// <returns></returns>
@@ -507,7 +519,7 @@ namespace YiYuan.Business
         }
 
         /// <summary>
-        /// 获得题目下的所有题意理解
+        /// 根据主键(Id)获得单个数据对象
         /// </summary>
         /// <param name="id">编号</param>
         /// <returns></returns>
@@ -580,10 +592,26 @@ namespace YiYuan.Business
             return context.Database.SqlQuery<TIn>(sql, parameters).ToList();
         }
 
+
+        /// <summary>
+        /// Executes the select SQL to 
+        /// <para>执行查询语句并返回集合列表</para>
+        /// <para>返回TIn 泛型集合对象</para>
+        /// </summary>
+        /// <typeparam name="TIn">返回映射泛型</typeparam>
+        /// <param name="sql">The SQL.</param>
+        /// <param name="parameters">The parameters.</param>
+        /// <returns></returns>
+        public dynamic ExecSelectSqlToTInList<TIn>(string sql, params object[] parameters)
+        {
+            return context.Database.SqlQuery<TIn>(sql, parameters).ToList();
+        }
+
+
         /// <summary>
         /// Executes the command SQL
         /// <para>执行命令的SQL</para>
-        /// </summary>	
+        /// </summary>
         /// <param name="sql">The SQL.</param>
         /// <param name="parameters">The parameters.</param>
         /// <returns></returns>
@@ -593,11 +621,71 @@ namespace YiYuan.Business
         }
 
         /// <summary>
-        /// 根据主键批量物理删除
+        /// 根据表达式删除
         /// </summary>
         /// <param name="where">where条件</param>
         /// <returns></returns>
         public IBusinessResponse<bool> Remove(Expression<Func<T, bool>> where)
+        {
+            return this.Remove(GetQueryable(where));
+        }
+
+        /// <summary>
+        /// 更新实体
+        /// </summary>
+        /// <param name="where">更新条件（表达式）</param>
+        /// <param name="t">更新的实体类</param>
+        /// <returns></returns>
+        public IBusinessResponse<bool> Update(Expression<Func<T, bool>> where, T t)
+        {
+            var rowNumber = GetQueryable(where).Update(p => t);
+
+            if (rowNumber == 0)
+            {
+                return new BusinessResponse<bool>(false, "更新失败", "Not_Row", false);
+            }
+            return new BusinessResponse<bool>(true, "更新成功", "Success", true);
+        }
+
+        /// <summary>
+        /// 更新实体
+        /// </summary>
+        /// <param name="where">更新条件（表达式）</param>
+        /// <param name="t">更新的实体类</param>
+        /// <returns></returns>
+        public IBusinessResponse<bool> Update(Expression<Func<T, bool>> where, Expression<Func<T, T>> updateExpression)
+        {
+            var rowNumber = GetQueryable(where).Update(updateExpression);
+
+            if (rowNumber == 0)
+            {
+                return new BusinessResponse<bool>(false, "更新失败", "Not_Row", false);
+            }
+            return new BusinessResponse<bool>(true, "更新成功", "Success", true);
+        }
+
+        /// <summary>
+        /// 更新实体类
+        /// <para>更新整行字段，更新前需把字段全部赋值</para>
+        /// </summary>
+        /// <param name="pu_model"></param>
+        public void Update(T t)
+        {
+            context.Set<T>().Attach(t);
+
+            var entry = context.Entry(t);
+
+            entry.State = EntityState.Modified;
+
+            context.SaveChanges();
+        }
+
+        /// <summary>
+        /// 根据主键批量物理删除
+        /// </summary>
+        /// <param name="where">where条件</param>
+        /// <returns></returns>
+        public IBusinessResponse<bool> Delete(Expression<Func<T, bool>> where)
         {
             return this.Remove(GetQueryable(where));
         }
@@ -618,13 +706,28 @@ namespace YiYuan.Business
             return new BusinessResponse<bool>(true, "删除成功", "Success", true);
         }
 
+        /// <summary>
+        /// 批量添加
+        /// http://www.tuicool.com/articles/iyYbiqe
+        /// </summary>
+        /// <param name="list"></param>
+        public void AddList(IList<T> list)
+        {
+            //context.BulkInsert(list);
+
+            //context.BulkSaveChanges();
+
+            context.Set<T>().AddRange(list);
+            context.SaveChanges();
+        }
+
 
         /// <summary>
         /// 新增
         /// </summary>
         /// <param name="entity">要新增的实体</param>
         /// <param name="IsSubmit">是否马上提交</param>
-        public IBusinessResponse<T> Create(T entity, bool IsSubmit = true)
+        public T Add(T entity, bool IsSubmit = true)
         {
             var resultEntity = context.Set<T>().Add(entity);
 
@@ -635,13 +738,9 @@ namespace YiYuan.Business
                 rowNumber = context.SaveChanges();
             }
 
-            if (rowNumber == 0)
-            {
-                return new BusinessResponse<T>(false, "没有受影响的行", "Not_Row");
-            }
-
-            return new BusinessResponse<T>(true, "新增成功", "Success") { Data = resultEntity };
+            return resultEntity;
         }
+
 
         /// <summary>
         /// 异步添加
@@ -653,26 +752,36 @@ namespace YiYuan.Business
             context.SaveChangesAsync();
         }
 
+
         /// <summary>
-        /// 批量新增
+        /// 新增
         /// </summary>
-        /// <param name="list"></param>
-        /// <returns></returns>
-        public IBusinessResponse<Int32> Create(IList<T> list)
+        /// <param name="entity">要新增的实体</param>
+        /// <param name="IsSubmit">是否马上提交</param>
+        public T Create(T entity, bool IsSubmit = true)
         {
-            context.Set<T>().AddRange(list);
+            var resultEntity = context.Set<T>().Add(entity);
 
-            var rowNumber = context.SaveChanges();
+            var rowNumber = 0;
 
-            if (rowNumber == 0)
+            if (IsSubmit)
             {
-                return new BusinessResponse<Int32>(false, "没有受影响的行", "Not_Row");
+                rowNumber = context.SaveChanges();
             }
 
-            return new BusinessResponse<Int32>(true, "批量新增成功", "Success") { Data = rowNumber };
+            return resultEntity;
         }
 
 
+        /// <summary>
+        /// 批量新增
+        /// </summary>
+        /// <param name="list">实体集合</param>
+        public void Add(IList<T> list)
+        {
+            context.Set<T>().AddRange(list);
+            context.SaveChanges();
+        }
 
     }
 }

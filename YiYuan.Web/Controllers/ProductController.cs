@@ -44,15 +44,16 @@ namespace YiYuan.Web.Controllers
         /// <returns></returns>
         public ActionResult Detail(int id = 0)
         {
-            //var activityBusiness = new IssueBusiness();       
+            var issueBusiness = new IssueBusiness();
 
-            //ViewBag.Data=activityBusiness.GetFirstByWhere(t=>t.GoodsId==id, t=>new {
-            //   t.Goods.Name,
-            //   t.Goods.Title,
-            //   t.No,
-            //   t.EndNumber,
-            //   t.EndTime,               
-            //   t.Goods.Description
+            //ViewBag.Data = issueBusiness.GetFirstByWhere(t => t.GoodsId == id, t => new
+            //{
+            //    t.Goods.Name,
+            //    t.Goods.Title,
+            //    t.No,
+            //    t.EndNumber,
+            //    t.EndTime,
+            //    t.Goods.Description
             //});
 
             ViewBag.Data = new ProductViewModel();
