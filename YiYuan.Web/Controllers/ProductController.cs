@@ -61,9 +61,9 @@ namespace YiYuan.Web.Controllers
             //    t.Goods.Description
             //});
 
-            ViewBag.Data = new ProductViewModel();
-
-            return View();
+            var model = new ProductViewModel();
+            //ViewBag.Data = model;
+            return View(model);
         }
 
         /// <summary>

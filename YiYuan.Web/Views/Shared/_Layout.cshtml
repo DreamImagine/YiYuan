@@ -67,14 +67,14 @@
         </div>
         <nav id="topTabBox">
             <ul id="topTab">
-                <li id="lotteryListEntry" class="tab-item fold-list">
+                <li id="lotteryListEntry" class="tab-item">
                     <a class="products-category">商品分类<i class="icon-base">&#xe605;</i></a>
                     <ul class="lotteryList">
                         <li class="lottery-item">
-                            <a href=javascript:;>全部商品</a>
+                            <a href="/product/sort/0">全部商品</a>
                         </li>
                         <li class="lottery-item">
-                            <a href=javascript:;>充值卡</a>
+                            <a href=/product/sort/1>充值卡</a>
                         </li>
                         <li class="lottery-item">
                             <a href=javascript:;>苹果专场</a>
@@ -103,17 +103,18 @@
                     <a href="/">首页</a>
                 </li>
                 <li pid="area-ten" class="tab-item">
-                    <a href="/ten/">十元专区</a>
+                    <a href="/product/index/10">十元专区</a>
                 </li>
-                <li pid="anc-latest" class="tab-item">
-                    <a href="/results/" target="_blank">最新揭晓</a>
-                </li>
-                <li pid="show-award" class="tab-item">
-                    <a href="/share/" target="_blank">晒单分享</a>
-                </li>
-                <li pid="download" class="tab-item">
-                    <a href="/app/" target="_blank">手机客户端</a>
-                </li>
+
+                @*<li pid="anc-latest" class="tab-item">
+                        <a href="/results/" target="_blank">最新揭晓</a>
+                    </li>
+                    <li pid="show-award" class="tab-item">
+                        <a href="/share/" target="_blank">晒单分享</a>
+                    </li>
+                    <li pid="download" class="tab-item">
+                        <a href="/app/" target="_blank">手机客户端</a>
+                    </li>*@
             </ul>
         </nav>
     </header>
@@ -210,6 +211,23 @@
     @Scripts.Render("~/bundles/bootstrap")
     @* <script src="~/Scripts/core.js"></script>*@
     @RenderSection("scripts", required: false)
+    <script>
+
+        var pathName = window.location.pathname.toLocaleLowerCase();
+
+        if (pathName != "/" && pathName != "/home" && pathName != "/home/index") {
+            $("#lotteryListEntry").addClass("fold-list");
+        };
+
+
+
+        $(".fold-list").hover(function () {
+            $(".fold-list").addClass("show-lottery")
+        }, function () {
+            $(".fold-list").removeClass("show-lottery")
+        })
+
+    </script>
 </body>
 </html>
 
