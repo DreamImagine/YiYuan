@@ -22,8 +22,9 @@ namespace YiYuan.Web.Admin.Controllers
         public ActionResult Index()
         {
 
+            var list = _goodsBusiness.GetQueryable().ToList();
 
-            return View();
+            return View(list);
         }
 
 

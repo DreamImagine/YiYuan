@@ -39,5 +39,10 @@ namespace YiYuan.ViewModel
         /// </summary>
         public DateTime EndTime { get; set; }
 
+        /// <summary>
+        /// 产品图片
+        /// </summary>
+        public List<string> ImgUrls { get; set; }
+
     }
 }

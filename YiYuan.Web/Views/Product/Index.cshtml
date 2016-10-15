@@ -19,23 +19,27 @@
                         <img src="~/Images/1468552858865_1.jpg" data-original="1468552858865_1.jpg" alt="" />
                     </div>
                     <div class="img">
-                        <a href="/product/detail/1" target="_blank">
-                            <img src="//pimg1.126.net/yyg/desktop/index/img/placeholder.7dfa552446.png" data-original="~/Images/1468552858865_1.jpg" alt="" />
+                        <a href="/product/detail/@item.Id" target="_blank">
+                            <img src="/placeholder.7dfa552446.png" data-original="~/Images/1468552858865_1.jpg" alt="" />
                         </a>
                         <div class="bg-placeholder"><i class="icon-base">&#xe600;</i></div>
                     </div>
                     <div class="content">
-                        <h3 class="title"><a href="/product/detail/1" target="_blank">千禧之星 100g金元宝</a></h3>
+                        <h3 class="title"><a href="/product/detail/@item.Id" target="_blank">@item.Name</a></h3>
                         <div class="progress">
-                            <p class="totalTimes">总需人次：35000</p>
+                            <p class="totalTimes">总需人次：@item.EndNumber</p>
                             <p class="progress-bar"><span class="bg " style="width:96.86%"></span> </p>
-                            <span class="joinTimes"><mark>1100</mark>已参与人次</span>
-                            <span class="remainTimes"><mark>33900</mark>剩余人次</span>
+                            <span class="joinTimes"><mark>@item.ExistNumber</mark>已参与人次</span>
+                            <span class="remainTimes"><mark>@(item.EndNumber - item.ExistNumber)</mark>剩余人次</span>
                         </div>
                         <div class="btns">
-                            <div class="inumber" data-min="10" data-max="33900">参与<i class="reduce">-</i><input name="num" value="10" /><i class="add">+</i>人次</div>
-                            <a href="javascript:;" class="buy" data-productid="2016061719PT663049549" data-periodid="167" data-mintimes="10"
-                               data-coinsPerTime="1" data-productname="千禧之星 100g金元宝">立即参与</a>
+                            <div class="inumber" data-min="@item.Min" data-max="@item.EndNumber">
+                                参与
+                                <i class="reduce">-</i>
+                                <input name="num" value="@item.Min" />
+                                <i class="add">+</i>人次
+                            </div>
+                            <a href="javascript:;" class="buy" data-productid="2" data-periodid="167" data-mintimes="10" data-coinsPerTime="1" data-productname="千禧之星 100g金元宝">立即参与</a>
                         </div>
                     </div>
                 </div>

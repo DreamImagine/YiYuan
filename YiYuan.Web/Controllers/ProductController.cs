@@ -12,12 +12,17 @@ namespace YiYuan.Web.Controllers
     /// </summary>
     public class ProductController : Controller
     {
-        // GET: Product
+        /// <summary>
+        /// 价格商品列表
+        /// </summary>
+        /// <param name="id">十元，是二元</param>
+        /// <returns></returns>
         [Route("product/{id}")]
         public ActionResult Index(int id = 0)
         {
 
             var list = new List<ProductListViewModel>();
+
             list.Add(new ProductListViewModel());
             list.Add(new ProductListViewModel());
             list.Add(new ProductListViewModel());

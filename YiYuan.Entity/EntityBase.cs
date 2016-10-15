@@ -26,6 +26,7 @@ namespace YiYuan.Entity
         /// 创建时间
         /// </summary>
         [Column(TypeName = "DateTime")]
+        [Display(Name = "创建时间")]
         public DateTime CreateTime { get; set; }
 
     }

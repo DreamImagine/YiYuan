@@ -16,21 +16,32 @@
 <div class="m-product-info">
     <div class="m-product-img">
         <div class="u-big-img">
-            <img src="../../image/1445588950504_1.jpg" alt="iPhone6s 64G" height="314">
+            @*<img src="../../image/1445588950504_1.jpg" alt="iPhone6s 64G" height="314">*@
+
+            <img src="@data.ImgUrls.FirstOrDefault()" alt="@data.Name" height="314">
         </div>
         <ul class="m-img-list">
-            <li class="u-small-img u-small-img0 img-active">
-                <img src="../../image/1445588950504_1.jpg" alt="iPhone6s 64G" height="88">
-            </li>
-            <li class="u-small-img u-small-img1">
-                <img src="../../image/1445588950504_1.jpg" alt="iPhone6s 64G" height="88">
-            </li>
-            <li class="u-small-img u-small-img2">
-                <img src="../../image/1445588950504_1.jpg" alt="iPhone6s 64G" height="88">
-            </li>
-            <li class="u-small-img u-small-img3">
-                <img src="../../image/1445588950504_1.jpg" alt="iPhone6s 64G" height="88">
-            </li>
+            @foreach (var item in data.ImgUrls)
+            {
+                <li class="u-small-img u-small-img0 img-active">
+                    <img src="@item" alt="data.Name"  height="88">
+                </li>
+            }
+
+
+            @*<li class="u-small-img u-small-img0 img-active">
+                    <img src="../../image/1445588950504_1.jpg" alt="iPhone6s 64G" height="88">
+                </li>
+
+                <li class="u-small-img u-small-img1">
+                    <img src="../../image/1445588950504_1.jpg" alt="iPhone6s 64G" height="88">
+                </li>
+                <li class="u-small-img u-small-img2">
+                    <img src="../../image/1445588950504_1.jpg" alt="iPhone6s 64G" height="88">
+                </li>
+                <li class="u-small-img u-small-img3">
+                    <img src="../../image/1445588950504_1.jpg" alt="iPhone6s 64G" height="88">
+                </li>*@
         </ul>
         <div class="m-promise">
             <div class="m-promise-item">
