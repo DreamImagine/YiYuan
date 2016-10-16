@@ -9,5 +9,10 @@ namespace YiYuan.Business
 {
     public class GoodsBusiness : BaseBusiness<Goods>
     {
+        public void AddImage(List<GoodsImg> list)
+        {
+            context.Set<GoodsImg>().AddRange(list);
+            context.SaveChangesAsync();
+        }
     }
 }

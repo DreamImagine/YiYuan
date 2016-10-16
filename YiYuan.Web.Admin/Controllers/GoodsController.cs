@@ -28,6 +28,7 @@ namespace YiYuan.Web.Admin.Controllers
         }
 
 
+
         public ActionResult Create()
         {
             return View();
@@ -37,6 +38,38 @@ namespace YiYuan.Web.Admin.Controllers
         public ActionResult Create(Goods goods)
         {
             _goodsBusiness.Add(goods);
+            return View();
+        }
+
+        /// <summary>
+        /// 上传商品图片
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult AddImg()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult AddImg(int goosId,List<string> imagerUrlsList )
+        {
+
+            var list=new List<GoodsImg>();
+
+            foreach (var item   in imagerUrlsList)
+            {
+                list.Add(new GoodsImg
+                {
+                   GoodsId = goosId,
+                   Path = item
+                });
+            }
+
+            var business=new GoodsBusiness();
+
+            business.AddImage(list);
+
             return View();
         }
 
@@ -50,6 +83,16 @@ namespace YiYuan.Web.Admin.Controllers
 
         [HttpPost]
         public ActionResult Edit(Goods goods)
+        {
+            return View();
+        }
+
+
+        /// <summary>
+        /// 编辑商品图片
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult EditImg(int  goodsId)
         {
             return View();
         }

@@ -6,17 +6,15 @@ namespace YiYuan.Web.Admin.Controllers
 {
     public class AdminInfoController : Controller
     {
-        readonly AdminInfoBusiness adminBusiness;
+        readonly AdminInfoBusiness _adminBusiness;
         public AdminInfoController()
         {
-            adminBusiness = new AdminInfoBusiness();
+            _adminBusiness = new AdminInfoBusiness();
 
         }
         // GET: AdminInfo
         public ActionResult Index()
         {
-
-
             return View();
         }
 
@@ -28,7 +26,7 @@ namespace YiYuan.Web.Admin.Controllers
         [HttpPost]
         public ActionResult Create(AdminInfo admin)
         {
-           adminBusiness.Create(admin);
+           _adminBusiness.Create(admin);
 
             return View();
         }

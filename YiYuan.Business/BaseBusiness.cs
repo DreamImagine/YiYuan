@@ -26,7 +26,7 @@ namespace YiYuan.Business
         public DataBaseContext context { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Payu.Business.Base.QueryBaseBusiness{T}"/> class.
+        /// Initializes a new instance of the <see cref="Business.Base.QueryBaseBusiness{T}"/> class.
         /// </summary>
         public BaseBusiness()
         {
@@ -66,12 +66,12 @@ namespace YiYuan.Business
         /// 返回总个数.
         /// </summary>
         /// <returns></returns>
-        public IBusinessResponse<Int32> GetCount()
+        public IBusinessResponse<int> GetCount()
         {
 
             var count = this.GetQueryable().Count();
 
-            return new BusinessResponse<Int32>(count);
+            return new BusinessResponse<int>(count);
         }
 
         /// <summary>

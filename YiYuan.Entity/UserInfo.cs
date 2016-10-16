@@ -90,6 +90,7 @@ namespace YiYuan.Entity
         /// <summary>
         /// 已充值金额
         /// </summary>
+        [Display(Name = "用户余额")]
         public decimal RechargePrice { get; set; }
 
 
