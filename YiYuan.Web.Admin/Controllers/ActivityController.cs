@@ -19,6 +19,9 @@ namespace YiYuan.Web.Admin.Controllers
 
             list.Add(new Activity());
 
+
+
+
             return View(list);
         }
 
