@@ -28,10 +28,8 @@ namespace YiYuan.Web.Admin.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
-        {
-            var list = new List<Activity>();
-
-            list.Add(new Activity());
+        {         
+            var list = _activityBusiness.GetByWhere(t => t.Id > 0).Data;       
 
             return View(list);
         }
@@ -50,11 +48,40 @@ namespace YiYuan.Web.Admin.Controllers
         [HttpPost]
         public ActionResult Create(Activity activitys)
         {
-            _activityBusiness.Add(activitys, true);
+            _activityBusiness.Add(activitys);
 
             return View();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activityId"></param>
+        /// <returns></returns>
+        public ActionResult Edit(int activityId)
+        {
+            var activity = _activityBusiness.GetFirstByWhere(t => t.Id == activityId).Data;
+
+            return View(activity);
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activityId"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult Edit(Activity activity)
+        {
+            _activityBusiness.Update(t => t.Id == activity.Id, t => new Activity
+            {
+                Name = activity.Name,
+                Price = activity.Price
+
+            });
+            return View(activity);
+        }
 
         /// <summary>
         /// 活动详情
@@ -63,6 +90,8 @@ namespace YiYuan.Web.Admin.Controllers
         /// <returns></returns>
         public ActionResult Details(int activityId)
         {
+            ViewBag.ActivityName = _activityBusiness.GetFirstByWhere(t => t.Id == activityId, t => t.Name).Data;
+
             return View();
         }
 
@@ -73,6 +102,9 @@ namespace YiYuan.Web.Admin.Controllers
         /// <returns></returns>
         public ActionResult AddGodds(int activityId)
         {
+            ViewBag.ActivityName = _activityBusiness.GetFirstByWhere(t => t.Id == activityId, t => t.Name).Data;
+            ViewBag.ActivityId = activityId;
+
             return View();
         }
 

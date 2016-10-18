@@ -292,6 +292,9 @@
     <Content Include="Views\Goods\Index.cshtml" />
     <Content Include="Views\UserInfo\Index.cshtml" />
     <Content Include="Views\Activity\Index.cshtml" />
+    <Content Include="Views\Activity\AddGodds.cshtml" />
+    <Content Include="Views\Activity\Edit.cshtml" />
+    <Content Include="Views\Goods\AddImg.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

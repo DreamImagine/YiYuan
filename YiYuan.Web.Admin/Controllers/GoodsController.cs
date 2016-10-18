@@ -45,28 +45,29 @@ namespace YiYuan.Web.Admin.Controllers
         /// 上传商品图片
         /// </summary>
         /// <returns></returns>
-        public ActionResult AddImg()
+        public ActionResult AddImg(int goodsId)
         {
+            ViewBag.GoodsId = goodsId;
+
             return View();
         }
 
 
         [HttpPost]
-        public ActionResult AddImg(int goosId,List<string> imagerUrlsList )
+        public ActionResult AddImg(int goosId, List<string> imagerUrlsList)
         {
+            var list = new List<GoodsImg>();
 
-            var list=new List<GoodsImg>();
-
-            foreach (var item   in imagerUrlsList)
+            foreach (var item in imagerUrlsList)
             {
                 list.Add(new GoodsImg
                 {
-                   GoodsId = goosId,
-                   Path = item
+                    GoodsId = goosId,
+                    Path = item
                 });
             }
 
-            var business=new GoodsBusiness();
+            var business = new GoodsBusiness();
 
             business.AddImage(list);
 
@@ -92,7 +93,7 @@ namespace YiYuan.Web.Admin.Controllers
         /// 编辑商品图片
         /// </summary>
         /// <returns></returns>
-        public ActionResult EditImg(int  goodsId)
+        public ActionResult EditImg(int goodsId)
         {
             return View();
         }
